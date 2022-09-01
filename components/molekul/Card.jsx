@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
+import Link from "next/link";
 const Card = ({ data }) => {
   return (
     <>
@@ -23,7 +24,14 @@ const Card = ({ data }) => {
           </p>
           <p className="text-sm md:mb-[20px] sm::mb-[5px]">{data.byline}</p>
           <h1 className="text-black text-xl font-bold md:mb-[20px] sm::mb-[5px]">
-            {data.title}
+            <Link
+              href={{
+                pathname: `/artikel/${data.id}`,
+                query: { isi: data.abstract, title: data.title },
+              }}
+            >
+              {data.title}
+            </Link>
           </h1>
           <p className="text-black md:mb-[20px] sm::mb-[5px]">
             {data.abstract}

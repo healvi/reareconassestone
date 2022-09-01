@@ -2,11 +2,21 @@ import axios from "axios";
 import Head from "next/head";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setartikelGlobal } from "../app/artikelReducer";
 import Card from "../components/molekul/card";
 import Navbar from "../components/molekul/Navbar";
 import styles from "../styles/Home.module.css";
 
 export default function Home({ data }) {
+  const dispatch = useDispatch();
+  const artikel = useSelector((state) => state.artikels.artikels);
+  useEffect(() => {
+    dispatch(setartikelGlobal(data));
+  }, []);
+  useEffect(() => {
+    console.log(artikel);
+  }, [artikel]);
   return (
     <div className={styles.container}>
       <Navbar />
