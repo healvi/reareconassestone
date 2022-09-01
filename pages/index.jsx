@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setartikelGlobal } from "../app/artikelReducer";
 import Card from "../components/molekul/card";
+import Content from "../components/molekul/Content";
 import Navbar from "../components/molekul/Navbar";
 import styles from "../styles/Home.module.css";
 
@@ -21,11 +22,12 @@ export default function Home({ data }) {
     <div className={styles.container}>
       <Navbar />
       <div className="grid grid-row-1 gap-1 p-4">
-        {data.length ? (
+        <Content data={data} />
+        {/* {data.length ? (
           data.map((v, i) => <Card data={v} key={i} />)
         ) : (
           <div>Loading</div>
-        )}
+        )} */}
       </div>
     </div>
   );
