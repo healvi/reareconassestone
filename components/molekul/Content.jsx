@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
-import Card from "./card";
+import Card from "./Card";
 
 const Content = ({ data }) => {
   const [posts, setPosts] = useState(data);
