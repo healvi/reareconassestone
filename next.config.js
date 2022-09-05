@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['flowbite.com', 'static01.nyt.com'],
+    domains: ['flowbite.com', 'static01.nyt.com', 'placeimg.com'],
   },
   eslint: {
     // Warning: This allows production builds to successfully complete even if

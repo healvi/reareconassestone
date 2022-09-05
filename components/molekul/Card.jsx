@@ -14,7 +14,11 @@ const Card = ({ data }) => {
             width={400}
             height={400}
             className="md:rounded-none md:rounded-l-lg"
-            src={data.media[0]["media-metadata"][2].url}
+            src={
+              data.media.length
+                ? data.media[0]["media-metadata"][2].url
+                : "http://placeimg.com/640/480/any"
+            }
             alt=""
           />
         </div>

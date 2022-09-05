@@ -20,11 +20,6 @@ export default function Home({ data }) {
       <Navbar />
       <div className="grid grid-row-1 gap-1 p-4">
         <Content data={data} />
-        {/* {data.length ? (
-          data.map((v, i) => <Card data={v} key={i} />)
-        ) : (
-          <div>Loading</div>
-        )} */}
       </div>
     </div>
   );
